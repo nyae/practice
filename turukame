@@ -1,0 +1,15 @@
+<?php
+$array=explode(" ",trim(fgets(STDIN)));
+$leg=$array[0];
+$head=$array[1];
+$turu_leg=$array[2];
+$kame_leg=$array[3];
+$turu=($leg-$kame_leg*$head)/($turu_leg-$kame_leg);
+$kame=$head-$turu;
+if (is_int($turu)===true && $turu>=0 && $kame>=0) {
+    echo $turu." ".$kame;
+}else {
+    echo "miss";
+}
+
+?>
